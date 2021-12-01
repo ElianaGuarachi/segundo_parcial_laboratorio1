@@ -1,14 +1,81 @@
-09:37:04 **** Incremental Build of configuration Debug for project segundo_parcial ****
+15:53:11 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+..\src\LinkedList.c: In function 'll_filter':
+..\src\LinkedList.c:373:8: warning: unused variable 'len' [-Wunused-variable]
+  373 |  int i,len;
+      |        ^~~
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+15:54:09 **** Incremental Build of configuration Debug for project segundo_parcial ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+Info: Nothing to build for segundo_parcial
+18:45:20 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+Info: Nothing to build for segundo_parcial
+00:04:30 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+00:05:55 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+09:10:51 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+..\src\segundo_parcial.c: In function 'main':
+..\src\segundo_parcial.c:91:19: warning: comparison between pointer and integer
+   91 |       if(cantidad != NULL)
+      |                   ^~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
 gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
-Info: Nothing to build for segundo_parcial
-09:43:13 **** Incremental Build of configuration Debug for project segundo_parcial ****
+09:11:39 **** Incremental Build of configuration Debug for project segundo_parcial ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+09:25:30 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+09:27:00 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+09:31:55 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
 gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
-Info: Nothing to build for segundo_parcial
+09:35:47 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+09:42:42 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 

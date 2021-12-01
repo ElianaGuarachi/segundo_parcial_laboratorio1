@@ -12,9 +12,11 @@ int MenuPrincipal()
 		    			"\n4. Listado de los libros"
 		    			"\n5. listado de los libros de la editorial MINOTAURO. Guardar el listado en un archivo csv."
 						"\n6. Nuevo listado con precios descuentos"
-		    			"\n7. Salir");
+						"\n7. Determinar cuántos libros cuestan mas de $500."
+						"\n8. Determinar la sumatoria de precios de los libros de la editorial PEARSON"
+		    			"\n9. Salir");
 
-	if(ObtenerEntero(&option, "\nIngrese una opcion del menu: ", "Error. Ingrese una opcion que este dentro del menu: ", 1, 7, 1)==0)
+	if(ObtenerEntero(&option, "\nIngrese una opcion del menu: ", "Error. Ingrese una opcion que este dentro del menu: ", 1, 9, 1)==0)
 	{
 		retorno = option;
 	}

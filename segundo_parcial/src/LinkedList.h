@@ -48,10 +48,21 @@ LinkedList* ll_newLinkedList(void);
 /// @return Retorna (-1) si el puntero es NULL o la cantidad de elementos de la lista
 int ll_len(LinkedList* this);  //devuelve el valor del campo int size
 
-/// VER
+/// @fn Node* test_getNode(LinkedList*,int)
+/// @brief  Permite realizar el test de la funcion getNode la cual es privada
+/// @param this Puntero a la lista
+/// @param nodeIndex Indice del nodo a obtener
+/// @return Retorna  (NULL) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
+///                  (pElement) Si funciono correctamente
 Node* test_getNode(LinkedList* this, int nodeIndex);
 
-/// VER
+/// @fn int test_addNode(LinkedList*, int, void*)
+/// @brief Permite realizar el test de la funcion addNode la cual es privada
+/// @param this Puntero a la lista
+/// @param nodeIndex Ubicacion donde se agregara el nuevo nodo
+/// @param pElement Puntero al elemento a ser contenido por el nuevo nodo
+/// @return Retorna  (-1) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
+///                  ( 0) Si funciono correctamente
 int test_addNode(LinkedList* this, int nodeIndex,void* pElement);
 
 /// @fn int ll_add(LinkedList*, void*)
@@ -180,17 +191,22 @@ LinkedList* ll_clone(LinkedList* this);
 int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order);
 
 /// @fn LinkedList ll_filter*(LinkedList*, int(*)(void*))
-/// @brief
+/// @brief Funcion que crea una lista al filtrar la lista de libros por editorial
 /// @param this Puntero a la lista
 /// @param fn Puntero a la funcion criterio
-/// @return
+/// @return Devuelve puntero a la lista nueva o NULL si el puntero es NULL
 LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element));
 
+/// @fn int ll_map(LinkedList*, int(*)(void*))
+/// @brief Funcion que recorre la lista para realizar la funcion criterio en cada elemento de la lista
+/// @param this Puntero a la lista
+/// @param pFn Puntero a la funcion criterio
+/// @return Retorna  (-1) Error: si el puntero a la lista es NULL o el puntero de la funcion
+///                  ( 0) Si cumple su funcion
+int ll_map (LinkedList* this, int (*fn)(void* element));
 
-LinkedList* ll_map (LinkedList* this, int (*fn)(void* element));
 
-
-
+float ll_count(LinkedList* this, float (*fn)(void* element));
 
 
 

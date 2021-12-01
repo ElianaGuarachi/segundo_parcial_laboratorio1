@@ -1,1 +1,10 @@
-Info: Nothing to build for segundo_parcial
+09:42:42 **** Incremental Build of configuration Debug for project segundo_parcial ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Books.o" "..\\src\\Books.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parser.o" "..\\src\\Parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\segundo_parcial.o" "..\\src\\segundo_parcial.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
+gcc -o segundo_parcial.exe "src\\Books.o" "src\\Controller.o" "src\\Editorial.o" "src\\LinkedList.o" "src\\Parser.o" "src\\Validaciones.o" "src\\segundo_parcial.o" "src\\utn.o" 
+
+09:43:06 Build Finished. 0 errors, 0 warnings. (took 23s.984ms)
+

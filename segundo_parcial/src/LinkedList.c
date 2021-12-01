@@ -1,8 +1,21 @@
 
 #include "LinkedList.h"
 
-
+/// @fn Node getNode*(LinkedList*, int)
+/// @brief Obtiene un nodo de la lista
+/// @param this Puntero a la lista
+/// @param nodeIndex Indice del nodo a obtener
+/// @return Retorna  (NULL) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
+///                  (pNode) Si funciono correctamente
 static Node* getNode(LinkedList* this, int nodeIndex);
+
+/// @fn int addNode(LinkedList*, int, void*)
+/// @brief  Agrega y enlaza un nuevo nodo a la lista
+/// @param this Puntero a la lista
+/// @param nodeIndex Ubicacion donde se agregara el nuevo nodo
+/// @param pElement Puntero al elemento a ser contenido por el nuevo nodo
+/// @return Retorna  (-1) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
+///                  ( 0) Si funciono correctamente
 static int addNode(LinkedList* this, int nodeIndex,void* pElement);
 
 
@@ -28,15 +41,6 @@ int ll_len(LinkedList* this)
     return returnAux;
 }
 
-
-/** \brief  Obtiene un nodo de la lista
- *
- * \param this LinkedList* Puntero a la lista
- * \param index int Indice del nodo a obtener
- * \return Node* Retorna  (NULL) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
-                        (pNode) Si funciono correctamente
- *
- */
 static Node* getNode(LinkedList* this, int nodeIndex)
 {
 	Node* pNode = NULL;
@@ -60,29 +64,12 @@ static Node* getNode(LinkedList* this, int nodeIndex)
     return pNode;
 }
 
-/** \brief  Permite realizar el test de la funcion getNode la cual es privada
- *
- * \param this LinkedList* Puntero a la lista
- * \param index int Indice del nodo a obtener
- * \return Node* Retorna  (NULL) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
-                        (pElement) Si funciono correctamente
- *
- */
+
 Node* test_getNode(LinkedList* this, int nodeIndex)
 {
     return getNode(this, nodeIndex);
 }
 
-
-/** \brief Agrega y enlaza un nuevo nodo a la lista
- *
- * \param this LinkedList* Puntero a la lista
- * \param nodeIndex int Ubicacion donde se agregara el nuevo nodo
- * \param pElement void* Puntero al elemento a ser contenido por el nuevo nodo
- * \return int Retorna  (-1) Error: si el puntero a la lista es NULL o (si el indice es menor a 0 o mayor al len de la lista)
-                        ( 0) Si funciono correctamente
- *
- */
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
     int returnAux = -1;
@@ -367,16 +354,14 @@ int ll_sort(LinkedList* this, int (*pFunc)(void* ,void*), int order)
 }
 
 
-
 LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element))
 {
 	LinkedList* filteredList = NULL;
-	int i,len;
+	int i;
 	if(this != NULL && fn != NULL)
 	{
 		filteredList = ll_newLinkedList();
-		len = ll_len(this);
-		for(i = 0; i< len; i++)
+		for(i = 0; i< ll_len(this); i++)
 		{
 			if(fn(ll_get(this,i)))
 			{
@@ -388,33 +373,43 @@ LinkedList* ll_filter(LinkedList* this, int (*fn)(void* element))
 }
 
 
-/*
-Desarrollar la función ll_map en la biblioteca linkedList, la cual recibirá la lista y una función.
-La función ll_map ejecutará la función recibida como parámetro por cada ítem de la lista,
-de este modo se realizarán descuentos a los precios según se detalla:
-* PLANETA: 20% (si el monto es mayor o igual a $300)
-* SIGLO XXI EDITORES: 10% (si el monto es menor o igual a $200)
-*/
-
-LinkedList* ll_map(LinkedList* this, int (*fn)(void* element))
+int ll_map(LinkedList* this, int (*fn)(void* element))
 {
-	int len;
+	int retorno=-1;
 	int i;
-	LinkedList* mapList = NULL;
 	if(this != NULL && fn != NULL)
 	{
-		mapList = ll_newLinkedList();
-		len = ll_len(this);
-		for(i=0;i<len;i++)
+		for(i=0;i<ll_len(this);i++)
 		{
-			if(fn(ll_get(this,i))==0)
-			{
-				ll_add(mapList,ll_get(this,i));
-			}
+			fn(ll_get(this,i));
+		}
+		retorno = 0;
+	}
+	return retorno;
+}
+
+
+float ll_count(LinkedList* this, float (*fn)(void* element))
+{
+	float contador=-1;
+	float auxContador;
+	int i;
+	if(this != NULL && fn != NULL)
+	{
+		contador =0;
+		for(i=0; i < ll_len(this);i++)
+		{
+			auxContador = fn(ll_get(this,i));
+			contador += auxContador;
 		}
 	}
-	return mapList;
+	return contador;
 }
+
+
+
+
+
 
 
 

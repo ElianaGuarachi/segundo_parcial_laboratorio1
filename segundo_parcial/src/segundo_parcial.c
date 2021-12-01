@@ -19,6 +19,8 @@ int main(void) {
 	int option;
 	int flagCargaLibros=0;
 	int flagCargaEditoriales=0;
+	int cantidad;
+	float price;
 	LinkedList* listaLibros = ll_newLinkedList();
 	LinkedList* listaEditoriales = ll_newLinkedList();
 
@@ -86,11 +88,27 @@ int main(void) {
 						break;
 
 					case 7:
+						cantidad = controller_countBooks(listaLibros);
+						if(cantidad != -1)
+						{
+							printf("\nLa cantidad de libros mayores a $500 es: %d\n", cantidad);
+						}
+						break;
+
+					case 8:
+						price = controller_countPriceByEditorial(listaLibros);
+						if(price != -1)
+						{
+							printf("\nLa suma total de los precios de los libros de la editorial PEARSON es: %.2f\n", price);
+						}
+						break;
+
+					case 9:
 						printf("\nUsted salio del programa\n");
 						break;
 				}
 	    	}
-		}while(option != 7);
+		}while(option != 9);
 
 	return EXIT_SUCCESS;
 }
